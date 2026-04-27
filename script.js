@@ -5,14 +5,17 @@ function minDate(dates) {
   let month = [];
   let date = [];
   for(let i=0; i<n; i++){
-	  [year[i], month[i],date[i]] = dates[i].split('/').map(Number);
+	  let [a,b,c] = dates[i].split('/').map(Number);
+	  year.push(a);
+	  month.push(b);
+	  date.push(c);
   }
 
   return Math.min(...date);
 	
 }
 
-Do not change the code
+// Do not change the code
 
 var dates = [
   "2023/03/01",
